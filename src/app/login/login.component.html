@@ -1,0 +1,16 @@
+<div>
+    <h1>Welcome to PriseRDV, please Login to access the calendar</h1>
+    <br>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="login">Login</label>
+            <input type="email" class="form-control" id="login"
+                placeholder="Enter Login">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+</div>

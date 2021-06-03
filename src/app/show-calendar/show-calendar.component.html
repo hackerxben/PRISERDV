@@ -1,0 +1,45 @@
+
+<div>
+    <div *ngIf="calendarVisible">
+        <full-calendar #calendar  [options]='calendarOptions'></full-calendar>
+    </div>
+</div>
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Add Appointment</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="childName" class="form-label">Child Name</label>
+          <input type="text" [value]="loggedInUser.childName" disabled class="form-control" id="childName">
+        </div>
+        <div class="mb-3">
+          <label for="doctor" class="form-label">Doctor</label>
+          <select [(ngModel)]="selectedDoctor" class="form-select form-control" name="doctor">
+            <option selected>Select a Doctor</option>
+            <option *ngFor="let doctor of availableDoctors">{{doctor}}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="timeSlot" class="form-label">TimeSlot</label>
+          <select [(ngModel)]="selectedTimeSlot" class="form-select form-control" name="timeSlot">
+            <option selected>Select Time Slot</option>
+            <option *ngFor="let timeslot of availableTimeSlots">{{timeslot}}</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="place" class="form-label">Place</label>
+          <input type="text" disabled class="form-control" id="place">
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close(content)">Confirm Appointment</button>
+    </div>
+  </ng-template>

@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "status": "REGULAR",
+        "doctor": {
+            "id": 1,
+            "firstName": "Doc1",
+            "lastName": "Doc1",
+            "login": "doc1",
+            "password": "zagrggrrzag",
+            "speciality": "speciality1",
+            "description": "description"
+        },
+        "parent": {
+            "id": 1,
+            "firstName": "Parent1",
+            "lastName": "Parent1",
+            "login": "parent1",
+            "password": "zagrggrrzag",
+            "childName": "child1"
+        },
+        "annotations": "agrgargar",
+        "dateStart": "2021-05-21T08:00:00",
+        "dateEnd": "2021-05-21T09:00:00",
+        "place": "Hospital"
+    },    
+    {
+        "id": 2,
+        "status": "URGENT",
+        "doctor": {
+            "id": 1,
+            "firstName": "Doc1",
+            "lastName": "Doc1",
+            "login": "doc1",
+            "password": "zagrggrrzag",
+            "speciality": "speciality1",
+            "description": "description"
+        },
+        "parent": {
+            "id": 1,
+            "firstName": "Parent2",
+            "lastName": "Parent2",
+            "login": "parent2",
+            "password": "zagrggrrzag",
+            "childName": "child2"
+        },
+        "annotations": "agrgargar",
+        "dateStart": "2021-05-18T08:00:00",
+        "dateEnd": "2021-05-18T09:00:00",
+        "place": "Hospital"
+    },
+    {
+        "id": 3,
+        "status": "URGENT",
+        "doctor": {
+            "id": 1,
+            "firstName": "Doc3",
+            "lastName": "Doc3",
+            "login": "doc3",
+            "password": "zagrggrrzag",
+            "speciality": "speciality5",
+            "description": "description"
+        },
+        "parent": {
+            "id": 1,
+            "firstName": "Parent10",
+            "lastName": "Parent10",
+            "login": "parent10",
+            "password": "zagrggrrzag",
+            "childName": "child5"
+        },
+        "annotations": "agrgargar",
+        "dateStart": "2021-05-21T10:00:00",
+        "dateEnd": "2021-05-21T11:00:00",
+        "place": "Hospital"
+    }
+]
