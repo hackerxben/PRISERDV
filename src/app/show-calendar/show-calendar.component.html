@@ -21,9 +21,9 @@
         </div>
         <div class="mb-3">
           <label for="doctor" class="form-label">Doctor</label>
-          <select [(ngModel)]="selectedDoctor" class="form-select form-control" name="doctor">
+          <select [(ngModel)]="selectedDoctor" class="form-select form-control" name="doctor" (change)="onDoctorChange($event)">
             <option selected>Select a Doctor</option>
-            <option *ngFor="let doctor of availableDoctors">{{doctor}}</option>
+            <option *ngFor="let doctor of availableDoctors">{{doctor.login}}</option>
           </select>
         </div>
         <div class="mb-3">
